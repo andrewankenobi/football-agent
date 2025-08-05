@@ -1,0 +1,161 @@
+---
+alwaysApply: true
+---
+
+# Brighton and Hove Albion FC Data Agent - Model Context
+
+## Project Overview
+This is a comprehensive AI-powered football club data analysis agent built with Google's Agent Development Kit (ADK) and BigQuery. The agent can analyze all aspects of Brighton and Hove Albion FC's football club operations using real-time data queries.
+
+## Architecture
+- **Framework**: Google ADK (Agent Development Kit) with Gemini 2.5 Flash
+- **Data Layer**: Google BigQuery with 13 interconnected tables
+- **Web Interface**: FastAPI with WebSocket support
+- **Authentication**: Google Cloud Application Default Credentials
+
+## Key Components
+
+### Core Files
+- `football-agent/agent.py`: Main ADK agent configuration with BigQuery tools and comprehensive instructions
+- `data_generation.sql`: Complete dataset creation script with 13 tables and 1M+ records
+- `setup_dataset.sh`: BigQuery dataset initialization script
+- `requirements.txt`: Python dependencies including google-adk, fastapi, bigquery
+
+### Data Schema (13 Tables)
+1. **fan_database** (1M+ records): Fan demographics, engagement, and geographic data
+2. **matches**: Match results, dates, venues, scores, attendance for Brighton and Hove Albion FC
+3. **players**: First team squad with personal details, positions, nationalities
+4. **player_stats_per_match**: Individual performance metrics per match
+5. **ticket_sales**: Individual ticket purchases with pricing and seating
+6. **merchandise_sales**: Product sales data from club stores
+7. **employees**: Club staff across all departments (marketing, finance, operations, coaching, medical)
+8. **sponsorships**: Commercial deals and partnership agreements
+9. **youth_academy_players**: Young players in the academy system
+10. **player_injuries**: Injury tracking and recovery timelines
+11. **social_media_engagement**: Marketing performance metrics
+12. **player_transfers_and_contracts**: Contract details, salaries, transfer fees
+13. **matchday_concession_sales**: Food and beverage sales at matches
+14. **scouting_reports**: Scout assessments of potential transfer targets
+
+## Agent Capabilities
+The agent can handle queries about:
+- Match performance analysis and trends
+- Player statistics and comparisons  
+- Financial performance and revenue streams
+- Fan engagement and demographics
+- Injury patterns and squad availability
+- Commercial partnerships and sponsorship value
+- Youth development pipeline
+- Transfer market analysis
+
+## Usage Patterns
+- **Primary Interface**: ADK CLI (`adk run bq-agent-app`)
+- **Secondary Interface**: ADK Web (`adk web`)
+- **Data Queries**: Always uses BigQuery tools dynamically, never hardcoded responses
+
+## Example Queries
+- "What are our top performing players this season?"
+- "How much revenue do we generate from ticket sales?"
+- "What's our injury situation like?"
+- "Who are our most engaged fans?"
+- "How are our social media posts performing?"
+- "What's the value of our sponsorship deals?"
+
+## Technical Notes
+- Uses ⚽ emoji for football/soccer (not 🏈 American football)
+- All data queries are executed through BigQuery tools in this order:
+  1. Explore datasets/tables (list_dataset_ids, get_dataset_info, list_table_ids, get_table_info)
+  2. Execute SQL queries (execute_sql)
+  3. Provide insights based on queried data
+- Club name is "Brighton and Hove Albion FC"
+- Synthetic data represents a realistic football club with complete operational data
+
+## Setup Requirements
+- Google Cloud Project with BigQuery enabled
+- Application Default Credentials configured
+- Python 3.8+
+- Run `./setup_dataset.sh` to create the football_agent dataset
+
+## File Conventions
+- SQL queries target the `football_agent` dataset
+- All tables are prefixed with schema context
+- Agent responses include proper football emojis and club branding
+- Error handling includes fallback to ADK CLI guidance# Brighton and Hove Albion FC Data Agent - Model Context
+
+## Project Overview
+This is a comprehensive AI-powered football club data analysis agent built with Google's Agent Development Kit (ADK) and BigQuery. The agent can analyze all aspects of Brighton and Hove Albion FC's football club operations using real-time data queries.
+
+## Architecture
+- **Framework**: Google ADK (Agent Development Kit) with Gemini 2.5 Flash
+- **Data Layer**: Google BigQuery with 13 interconnected tables
+- **Web Interface**: FastAPI with WebSocket support
+- **Authentication**: Google Cloud Application Default Credentials
+
+## Key Components
+
+### Core Files
+- `football-agent/agent.py`: Main ADK agent configuration with BigQuery tools and comprehensive instructions
+- `data_generation.sql`: Complete dataset creation script with 13 tables and 1M+ records
+- `setup_dataset.sh`: BigQuery dataset initialization script
+- `requirements.txt`: Python dependencies including google-adk, fastapi, bigquery
+
+### Data Schema (13 Tables)
+1. **fan_database** (1M+ records): Fan demographics, engagement, and geographic data
+2. **matches**: Match results, dates, venues, scores, attendance for Brighton and Hove Albion FC
+3. **players**: First team squad with personal details, positions, nationalities
+4. **player_stats_per_match**: Individual performance metrics per match
+5. **ticket_sales**: Individual ticket purchases with pricing and seating
+6. **merchandise_sales**: Product sales data from club stores
+7. **employees**: Club staff across all departments (marketing, finance, operations, coaching, medical)
+8. **sponsorships**: Commercial deals and partnership agreements
+9. **youth_academy_players**: Young players in the academy system
+10. **player_injuries**: Injury tracking and recovery timelines
+11. **social_media_engagement**: Marketing performance metrics
+12. **player_transfers_and_contracts**: Contract details, salaries, transfer fees
+13. **matchday_concession_sales**: Food and beverage sales at matches
+14. **scouting_reports**: Scout assessments of potential transfer targets
+
+## Agent Capabilities
+The agent can handle queries about:
+- Match performance analysis and trends
+- Player statistics and comparisons  
+- Financial performance and revenue streams
+- Fan engagement and demographics
+- Injury patterns and squad availability
+- Commercial partnerships and sponsorship value
+- Youth development pipeline
+- Transfer market analysis
+
+## Usage Patterns
+- **Primary Interface**: ADK CLI (`adk run bq-agent-app`)
+- **Secondary Interface**: ADK Web (`adk web`)
+- **Data Queries**: Always uses BigQuery tools dynamically, never hardcoded responses
+
+## Example Queries
+- "What are our top performing players this season?"
+- "How much revenue do we generate from ticket sales?"
+- "What's our injury situation like?"
+- "Who are our most engaged fans?"
+- "How are our social media posts performing?"
+- "What's the value of our sponsorship deals?"
+
+## Technical Notes
+- Uses ⚽ emoji for football/soccer (not 🏈 American football)
+- All data queries are executed through BigQuery tools in this order:
+  1. Explore datasets/tables (list_dataset_ids, get_dataset_info, list_table_ids, get_table_info)
+  2. Execute SQL queries (execute_sql)
+  3. Provide insights based on queried data
+- Club name is "Brighton and Hove Albion FC"
+- Synthetic data represents a realistic football club with complete operational data
+
+## Setup Requirements
+- Google Cloud Project with BigQuery enabled
+- Application Default Credentials configured
+- Python 3.8+
+- Run `./setup_dataset.sh` to create the football_agent dataset
+
+## File Conventions
+- SQL queries target the `football_agent` dataset
+- All tables are prefixed with schema context
+- Agent responses include proper football emojis and club branding
+- Error handling includes fallback to ADK CLI guidance

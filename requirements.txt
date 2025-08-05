@@ -1,0 +1,6 @@
+google-adk
+google-cloud-bigquery
+fastapi
+uvicorn
+websockets
+python-dotenv 
